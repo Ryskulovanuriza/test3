@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: greenyellow
+    }
+    div span {
+        text-align: center;
+        font-size: 200px;
+    }
+    div {
+        text-align: center;
+        font-size: 200px;
+    }
+</style>
+<body id="body">
+    <div id="div" > <span id="span" >00</span>:<span id="span1" >00</span></div>
+    <script>
+        let body = document.getElementById('body');
+        let span = document.getElementById('span');
+        let span1 = document.getElementById('span1');
+        s = 0;
+        s1 = 0;
+        start = false;
+        document.body.onkeyup = function (e) {
+          if (e.key === ' ') {
+              start = !start;
+
+              if(start === false) {
+                 if(confirm('?')) {
+                    s = 0;
+                    s1 = 0;
+                    span1.innerText = '00';
+                    span.innerText = '00';
+                 }
+              }
+          }
+        };
+
+        setInterval(function(){
+                if(start === true){
+                    s++;
+                    span1.innerText = s < 10 ?`0 ${s} `: s;
+                    if (s === 59) {
+                        span.innerText++;
+                        span.innerText = +span.innerText < 10 ? `0 ${span.innerText}` : span.innerText;
+                        s = 0;
+                    }
+                }
+        }, 100);
+        
+    </script>
+</body>
+</html>

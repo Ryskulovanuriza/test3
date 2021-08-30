@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nur{
+            display: inline-block;
+        }
+        .div1{
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            border: solid 1px black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            
+
+        }
+        .div2{
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            background-color:white;
+            border: solid 1px black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }.div3{
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            background-color:khaki;
+            border: solid 1px black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="nur"></div>
+    <div class="div1" onclick="nuride(1)">+</div>
+    <div class="div2">0</div>
+    <div class="div3" onclick="nuri(1)">-</div></div>
+
+
+    <script>
+        let a =0
+    function nuride(p){
+        a +=p;
+        document.querySelector(`.div2`).innerHTML =a
+ } function nuri(p){
+        a -=p;
+        document.querySelector(`.div2`).innerHTML =a
+ }
+
+    </script>
+</body>
+</html>

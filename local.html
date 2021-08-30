@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sign in</h1>
+    <label for="text">Login:</label>
+    <input type="text" id="text"></br>
+    <label for="text">Password:</label>
+    <input type="text" id="text2"></br>
+    <input type="checkbox" id="nur" name="" checked>
+    <label for= "scales">remember me </label></br>
+    <button >ok </button>
+    <script>
+        let login = document.getElementById('text'); 
+        let password = document.getElementById('text2'); 
+        let button = document.querySelector("button") 
+        let checkbox = document.getElementById("scales") 
+ 
+ 
+ 
+        button.onclick = () => { 
+            if (login.value == "nazgul" && password.value == 1234) { 
+                if (checkbox.checked) { 
+                    localStorage.setItem('login', login.value) 
+                    localStorage.setItem("password", password.value) 
+                    sessionStorage.clear() 
+ 
+                    alert("yes"); 
+                } else { 
+                    sessionStorage.setItem('login', login.value) 
+                    sessionStorage.setItem("password", password.value) 
+                    localStorage.clear() 
+                } 
+            } else { 
+                alert("no") 
+            } 
+ 
+        } 
+    </script>
+
+    
+
+
+    </script>
+</body>
+</html>

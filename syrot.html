@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		img{
+			width: 500px;
+		}
+	</style>
+</head>
+<body>
+	<div><input type="value" id="input" ></input>
+	<button id="btn" >Отправить</button></div>
+	<img id="img" src="">
+    <h1 align =`center`></h1>
+    <script type="text/javascript">
+	const images = {
+   'кошка': 'https://icdn.lenta.ru/images/2020/08/08/13/20200808131211392/square_1280_7efc59cef497ea4709ca7c66021763cb.jpg',
+   'собака': 'https://ichef.bbci.co.uk/news/640/cpsprodpb/475B/production/_98776281_gettyimages-521697453.jpg',
+   'ноутбук': 'https://mobile-review.com/articles/2020/image/echo-102/pic/4.jpg',
+   'телефон': 'https://www.ixbt.com/img/n1/news/2020/9/4/s-l1600_large.png',
+   'tesla': 'https://www.ixbt.com/img/n1/news/2021/5/3/maxresdefault_0_large.png',
+   'mercedes': 'https://lh3.googleusercontent.com/proxy/tELUz4UjB-eo_ZYlW9v3_emE3_HVuj47onh87tg416zbUhtELoNCQ8BvdS2vAp04SunpbMmn1qDjvEXYz742d6y9VQc',
+  };
+    let input = document.getElementById('input');
+	let btn = document.getElementById(`btn`);
+	let img = document.getElementById(`img`);
+    let a = [`red`,`blue`,`orange`,`pink`];
+    let d =0;
+    let b =0;
+    function nur() {
+        if (input.value in images){
+            img.src = images[input.value]
+        } else{
+            img.src = `https://exploringtm1.com/wp-content/uploads/2021/07/TM1-TI-Error-Codes.jpg`
+        }
+        
+    }
+    btn.onclick=function(){
+        nur()
+    }
+
+   
+    
+
+
+		
+
+console.log(input);
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<button id="n">Add new item</button>
+<ul></ul>
+<script type="text/javascript">
+const a=['red','blue',`yellow`,`pink`,`green`]
+let i=0;
+n.onclick = function () {
+let m=prompt(`?`)
+if (i === 5){
+	alert(`you cant`);  
+    return;
+}
+
+document.querySelector('ul').innerHTML+=`<li style='background:`+a[i]+`'>`+m+`</li>`
+i++
+};
+
+
+
+	
+</script>
+</body>
+</html>

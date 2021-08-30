@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button onclick="item1">Add new item</button>  
+<ul>
+    <li>
+        item1
+    </li>
+</ul>
+<script>
+    let a=0;
+function item1 (params) {
+    a++;
+    document.body.children[1].innerHTML =` <li> item ${+a}</li>`
+    
+
+    
+}
+</script>
+</body>
+</html>

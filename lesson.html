@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+ 
+<body> 
+    <form > 
+    <h1>Продукты</h1> 
+    <p>Сортировка: <button id="button2" style="margin-right: 5px;">Add</button><button id="button3" onclick="joke()">Abb</button></p> 
+    <button id="button" style="margin: 2px;">Баскыч</button> 
+    <ul id="ul"></ul> 
+</form> 
+    <script> 
+        const h1 = document.querySelector("h1"); 
+        const button = document.getElementById('button'); 
+        const dollar = 84; 
+        let jom = JSON.parse(localStorage.getItem("user"))||[]; 
+        let button2 = document.getElementById('button2'); 
+        let button3 = document.getElementById('button3'); 
+        let ul = document.getElementById('ul') 
+ 
+         
+ 
+        button.onclick = () => { 
+            const text = prompt("Продуктанын аты?") 
+            const Price = prompt("Баасы?") 
+            jom.push({tex:text , p:Price}); 
+            localStorage.setItem("user", JSON.stringify(jom)) 
+            fun() 
+        } 
+        function fun(){ 
+            ul.innerHTML = jom.map((item)=>`<li>${item.tex + item.p + '$' + ' ' + `( ${item.p * dollar}  сом)`}</li>`) 
+        } 
+        fun(); 
+        button2.onclick=()=>{ 
+          jom.reverse() 
+          console.log(jom); 
+          localStorage.setItem("user", JSON.stringify(jom)) 
+        } 
+    </script> 
+</body> 
+</html>
